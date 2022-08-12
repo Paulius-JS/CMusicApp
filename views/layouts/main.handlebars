@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify SQL</title>
+    <link rel="stylesheet" href="../styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+
+  </head>
+  <body>
+    <video playsinline autoplay muted loop id="bgvid">
+      <source src="media/bg.webm" type="video/webm" />
+      <source src="media/bg.mp4" type="video/mp4" />
+    </video>
+    
+      {{#if error}}
+      <div class="error"></div>
+        <div class="message">{{error}}</div>
+        </div>
+      {{/if}}
+    
+
+    {{{body}}}
+  </body>
+</html>

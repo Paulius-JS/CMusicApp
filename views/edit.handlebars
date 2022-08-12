@@ -1,0 +1,27 @@
+<video playsinline autoplay muted loop id="bgvid">
+  <source src="../media/bg.webm" type="video/webm" />
+  <source src="../media/bg.mp4" type="video/mp4" />
+</video>
+
+
+      {{#if error}}
+      <div class="error"></div>
+        <div class="message">{{error}}</div>
+        </div>
+      {{/if}}
+
+
+<div class="createPlaylists1">
+
+  <form method="POST">
+    <div>
+      <h2>edit song</h2>
+    </div>
+    <input type="text" name="song_Name" value="{{song_Name}}" />
+    <input type="text" name="song_Album" value="{{song_Album}}" />
+    <input type="text" name="urlyt" value="{{urlyt}}" />
+    <button type="submit" class="mainButton1">submit</button>
+  </form>
+<span class="registerBtn"><a href="/songs">Back</a></span>
+
+</div>

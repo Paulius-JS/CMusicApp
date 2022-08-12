@@ -1,0 +1,40 @@
+<div class="greetingWindow">
+  {{! after cookie implanted will show name }}
+  <span class="welcomeText">Oh, hey
+    <span class="userName">{{name}}</span>
+    , what would you like to do?</span>
+  <span class="registerBtn"><a href="/">Log out</a></span>
+</div>
+
+<div class="mainMeniu">
+  <a href="/playlists/new"><button class="mainButton1">Create Playlist</button></a>
+  <a href="/songs"><button class="mainButton1">All songs</button></a>
+</div>
+
+<div class="playlistsTable">
+  <table>
+    <thead>
+      <tr>
+
+        <th></th>
+        <th></th>
+        <th></th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {{#each playlists}}
+        <tr>
+
+          <td><div class="smaler"><img
+                src="/nuotarkos/{{image}}"
+                alt=""
+              /></div></td>
+          <td>{{playlist_Name}}</td>
+          <td><a href="/playlists/delete/{{id}}">delete </a>
+            <a href="/editPlaylist/{{id}}"> edit</a></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

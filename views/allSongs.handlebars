@@ -1,0 +1,32 @@
+ <div class="SongBack"></div>
+ <span class="registerBtn"><a href="/">Back to meniu</a></span>
+</div>
+<div class="songsTable">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Song</th>
+        <th>Album</th>
+        <th>Playlist</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {{#each songs}}
+        <tr>
+          <td>{{song_Name}}</td>
+          <td>{{song_Album}}</td>
+          <td>{{playlist_id}}</td>
+          <td><div class="playBtn"><a
+                target="_blank"
+                href="https://www.youtube.com/watch?v={{{urlyt}}}"
+              ><img src="/imgs/play.png" alt="" /></a></div></td>
+
+
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  

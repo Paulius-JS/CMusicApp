@@ -1,0 +1,72 @@
+<div class="greetingWindow">
+  {{! after cookie implanted will show name }}
+  <span class="welcomeText">Oh, hey
+    <span class="userName">{{name}}</span>
+    , what would you like to do?</span>
+  <span class="registerBtn"><a href="/">Log out</a></span>
+</div>
+
+<div class="mainMeniu">
+
+  <a href="/playlists/new"><button class="mainButton1">Create Playlist</button></a>
+  <a href="/playlists"><button class="mainButton1">Back to Playlist</button></a>
+</div>
+
+<div class="addSong">
+  <form method="POST">
+    <input type="text" name="song_Name" placeholder="Song Name" />
+    <input type="text" name="song_Album" placeholder="Album" />
+    <input type="text" name="urlyt" placeholder="Youtube link" />
+    <select name="SongSelectorRegister">
+      {{#each playerPlaylist}}
+        <option value="{{id}}">{{playlist_name}}</option>
+      {{/each}}
+    </select>
+    <button type="submit" class="Mainbutton">Add song</button>
+  </form>
+</div>
+
+<div class="songsTable">
+  <table>
+    <thead>
+      <tr>
+        <th>Song</th>
+        <th>Album</th>
+        <th>Playlist</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{test}}
+      {{#each songs}}
+        <tr>
+          <td>{{song_Name}}</td>
+          <td>{{song_Album}}</td>
+          {{!-- {{#each ../playerPlaylist}}
+            <td>{{playlist_name}}</td>
+          {{/each}} --}}
+          <td><div class="playBtn"><a
+                target="_blank"
+                href="https://www.youtube.com/watch?v={{{urlyt}}}"
+              ><img src="/imgs/play.png" alt="" /></a></div></td>
+          <td>
+            {{! for now not working }}
+            {{!-- <form method="POST">
+            <select name="SongSelectorUpdater">
+              {{#each ../playerPlaylist}}
+                <option value="{{id}}">{{playlist_name}}</option>
+              {{/each}}
+            </select>
+            <button type="submit" class="Mainbutton">Add to playlist</button>
+            </form> --}}
+          </td>
+
+          <td><a href="/delete/{{id}}">delete</a></td>
+          <td><a href="/edit/{{id}}">edit</a></td>
+
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
