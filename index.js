@@ -58,11 +58,12 @@ app.use(
 );
 
 const database = await mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "testineduombaze",
+  host: "pauliuspetrunin.lt",
+  user: "bit",
+  password: "kulokas",
+  database: "PauliusP",
 });
+const PORT = process.env.PORT || 3000;
 
 // ALL SONGS
 
@@ -312,7 +313,7 @@ app.post("/playlists/new", upload.single("nuotarka"), async (req, res) => {
     res.redirect("/playlists");
   });
 
-app.listen(3000);
+app.listen(PORT);
 
 //////////////////////////////TODO/////////////
 
