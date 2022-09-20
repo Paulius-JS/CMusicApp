@@ -20,4 +20,5 @@ planned changes:
 5. create proper log out.
 6. and more...
 
+PROJECT CLOSED WILL BE REWORKED ON REACT
 
